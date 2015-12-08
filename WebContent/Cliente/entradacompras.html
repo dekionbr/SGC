@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+
+<title>SGC | Painel de Compra</title>
+
+<meta name="description" content="Sistema de Gerenciamento de compras">
+<meta name="author" content="artproweb.com">
+
+
+<!-- Google Font and style definitions -->
+<link rel="stylesheet"
+	href="http://fonts.googleapis.com/css?family=PT+Sans:regular,bold">
+<link rel="stylesheet" href="../css/style.css">
+
+<!-- include the skins (change to dark if you like) -->
+<link rel="stylesheet" href="../css/light/theme.css" id="themestyle">
+<!-- <link rel="stylesheet" href="../css/dark/theme.css" id="themestyle"> -->
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<link rel="stylesheet" href="css/ie.css">
+	<![endif]-->
+
+<!-- Apple iOS and Android stuff -->
+<meta name="apple-mobile-web-app-capable" content="no">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed"
+	href="apple-touch-icon-precomposed.png">
+
+<!-- Apple iOS and Android stuff - don't remove! -->
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1">
+
+<!-- Use Google CDN for jQuery and jQuery UI -->
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script>
+
+<!-- Loading JS Files this way is not recommended! Merge them but keep their order -->
+
+<!-- some basic functions -->
+<script src="../js/functions.js"></script>
+
+<!-- all Third Party Plugins and Whitelabel Plugins -->
+<script src="../js/plugins.js"></script>
+<script src="../js/editor.js"></script>
+<script src="../js/calendar.js"></script>
+<script src="../js/flot.js"></script>
+<script src="../js/elfinder.js"></script>
+<script src="../js/datatables.js"></script>
+<script src="../js/wl_Alert.js"></script>
+<script src="../js/wl_Autocomplete.js"></script>
+<script src="../js/wl_Breadcrumb.js"></script>
+<script src="../js/wl_Calendar.js"></script>
+<script src="../js/wl_Chart.js"></script>
+<script src="../js/wl_Color.js"></script>
+<script src="../js/wl_Date.js"></script>
+<script src="../js/wl_Editor.js"></script>
+<script src="../js/wl_File.js"></script>
+<script src="../js/wl_Dialog.js"></script>
+<script src="../js/wl_Fileexplorer.js"></script>
+<script src="../js/wl_Form.js"></script>
+<script src="../js/wl_Gallery.js"></script>
+<script src="../js/wl_Multiselect.js"></script>
+<script src="../js/wl_Number.js"></script>
+<script src="../js/wl_Password.js"></script>
+<script src="../js/wl_Slider.js"></script>
+<script src="../js/wl_Store.js"></script>
+<script src="../js/wl_Time.js"></script>
+<script src="../js/wl_Valid.js"></script>
+<script src="../js/wl_Widget.js"></script>
+
+<!-- configuration to overwrite settings -->
+<script src="../js/config.js"></script>
+
+<!-- the script which handles all the access to plugins etc... -->
+<script src="../js/script.js"></script>
+
+
+</head>
+<body>
+	<div id="pageoptions">
+		<ul>
+			<li><a href="login.html">Logout</a></li>
+			<li><a href="#" id="wl_config">Configuration</a></li>
+			<li><a href="#">Settings</a></li>
+		</ul>
+		<div>
+			<h3>Place for some configs</h3>
+			<p>Li Europan lingues es membres del sam familie. Lor separat
+				existentie es un myth. Por scientie, musica, sport etc, litot Europa
+				usa li sam vocabular. Li lingues differe solmen in li grammatica, li
+				pronunciation e li plu commun vocabules. Omnicos directe al
+				desirabilite de un nov lingua franca: On refusa continuar payar
+				custosi traductores.</p>
+		</div>
+	</div>
+
+	<header>
+		<div id="logo">
+			<a href="test.html">Logo Here</a>
+		</div>
+		<div id="header">
+			<div id="searchbox">
+				<form id="searchform">
+					<input type="search" name="query" id="search" placeholder="Search">
+				</form>
+			</div>
+		</div>
+	</header>
+
+	<nav>
+		<ul id="nav">
+			<li class="i_house"><a href="dashboard.html"><span>Dashboard</span></a></li>
+			<li class="i_moneyl"><a><span>Compras</span></a>
+				<ul>
+					<li><a href="pedidocompras.html"><span>Pedido</span></a></li>
+					<li><a href="ordemcompras.html"><span>Ordem</span></a></li>
+					<li><a href="entradacompras.html"><span>Entrada</span></a></li>
+				</ul></li>
+			<li class="i_graph"><a><span>Relatórios</span></a>
+				<ul>
+					<li><a href="relatorios_pedido_compra.html"><span>Pedido
+								de Compra</span></a></li>
+					<li><a href="relatorios_ordem_compra.html"><span>Ordem
+								de Compra</span></a></li>
+					<li><a href="relatorios_compra.html"><span>Compra</span></a></li>
+				</ul></li>
+		</ul>
+	</nav>
+
+
+	<section id="content">
+
+
+
+		<div class="g12">
+			<h1>
+				Pedidos <span><a href="ajuda.html" class="small">Ajuda</a></span>
+			</h1>
+
+
+			<form id="form" action="" method="post" autocomplete="off">
+				<fieldset>
+					<label>Cadastro de pedido</label>
+					<section>
+						<label for="descricao">Descrição</label>
+						<div>
+							<textarea id="descricao" name="descricao" class="html" rows="12"></textarea>
+						</div>
+					</section>
+					<section>
+						<label for="vlr_unitario">Valor Unitário</label>
+						<div>
+							<input id="vlr_unitario" name="vlr_unitario" type="number"
+								class="decimal">
+						</div>
+					</section>
+					<section>
+						<label for="vlr_total">Valor Total</label>
+						<div>
+							<input id="vlr_total" name="vlr_total" type="number"
+								class="decimal">
+						</div>
+					</section>
+					<section>
+						<label for="vlr_total_ordem">Valor Total da Ordem</label>
+						<div>
+							<input id="vlr_total_ordem" name="vlr_total_ordem" type="number"
+								class="decimal">
+						</div>
+					</section>
+					<section>
+						<label for="Data">Data</label>
+						<div>
+							<input id="Data" name="Data" type="text" class="date">
+						</div>
+					</section>
+					<section>
+						<label for="Hora">Hora</label>
+						<div>
+							<input id="Hora" name="Hora" type="text" class="time">
+						</div>
+					</section>
+					<section>
+						<label for="autocomplete_inline">Pedido</label>
+						<div>
+							<input id="autocomplete_inline" name="autocomplete_inline"
+								type="text" class="autocomplete"
+								data-source="[Detergente,Dipirona,Gaze,Metamizol,Novalgina,Seringas,Seringas tamnho 1,Seringas tamnho 2,Vassouras]">
+						</div>
+					</section>
+					<section>
+						<label for="cod_fornecedor">Código Fornecedor</label>
+						<div>
+							<input id="cod_fornecedor" name="cod_fornecedor" type="text" />
+						</div>
+					</section>
+					<section>
+						<label for="nome_fantasia">Nome Fantasia</label>
+						<div>
+							<input type="text" id="nome_fantasia" name="nome_fantasia" />
+						</div>
+					</section>
+					<section>
+						<label for="dt_entrega">Data Entrega</label>
+						<div>
+							<input id="dt_entrega" name="dt_entrega" type="text" class="date">
+						</div>
+					</section>
+					<section>
+						<label for="status">Status</label>
+						<div>
+							<input type="checkbox" id="status" name="status" /> <label>Ativo</label>
+						</div>
+					</section>
+				</fieldset>
+				<fieldset>
+					<section>
+						<div>
+							<button class="reset">Limpar</button>
+							<button class="submit" name="Cadastrar" value="Cadastrar">Cadastrar</button>
+						</div>
+					</section>
+				</fieldset>
+			</form>
+		</div>
+	</section>
+	<!-- end div #content -->
+	<footer>Copyright by ASA 2015</footer>
+</body>
+</html>

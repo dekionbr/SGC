@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+
+	<display-name>SGC</display-name>
+	<servlet>
+		<display-name>FuncionarioSL</display-name>
+		<servlet-name>FuncionarioSL</servlet-name>
+		<servlet-class>com.SGC.controller.FuncionarioServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>ProdutoSL</display-name>
+		<servlet-name>ProdutoSL</servlet-name>
+		<servlet-class>com.SGC.controller.ProdutoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>FornecedorSL</display-name>
+		<servlet-name>FornecedorSL</servlet-name>
+		<servlet-class>com.SGC.controller.FornecedorServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>ContatoSL</display-name>
+		<servlet-name>ContatoSL</servlet-name>
+		<servlet-class>com.SGC.controller.ContatoServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>BaixaSL</display-name>
+		<servlet-name>BaixaSL</servlet-name>
+		<servlet-class>com.SGC.controller.BaixaServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>EntradaSL</display-name>
+		<servlet-name>EntradaSL</servlet-name>
+		<servlet-class>com.SGC.controller.EntradaServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>OrdemDeCompraSL</display-name>
+		<servlet-name>OrdemDeCompraSL</servlet-name>
+		<servlet-class>com.SGC.controller.OrdemDeCompraServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>AuthenticationSL</display-name>
+		<servlet-name>AuthenticationSL</servlet-name>
+		<servlet-class>com.SGC.controller.AuthenticationServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>DashboardSL</display-name>
+		<servlet-name>DashboardSL</servlet-name>
+		<servlet-class>com.SGC.controller.DashboardServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>RelatorioSL</display-name>
+		<servlet-name>RelatorioSL</servlet-name>
+		<servlet-class>com.SGC.controller.RelatorioServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>GerarRelatorioSL</display-name>
+		<servlet-name>GerarRelatorioSL</servlet-name>
+		<servlet-class>com.SGC.controller.GerarRelatorioServlet</servlet-class>
+	</servlet>
+
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+
+	<!-- // Login -->
+
+	<servlet-mapping>
+		<servlet-name>AuthenticationSL</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+
+	<!-- // Login -->
+
+	<!-- // Funcionario -->
+
+	<servlet-mapping>
+		<servlet-name>FuncionarioSL</servlet-name>
+		<url-pattern>/DesativarFuncionario</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FuncionarioSL</servlet-name>
+		<url-pattern>/IncluirFuncionario</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FuncionarioSL</servlet-name>
+		<url-pattern>/Funcionario/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FuncionarioSL</servlet-name>
+		<url-pattern>/Funcionarios</url-pattern>
+	</servlet-mapping>
+
+	<!-- // Funcionario -->
+
+	<!-- // Fornecedor -->
+
+	<servlet-mapping>
+		<servlet-name>FornecedorSL</servlet-name>
+		<url-pattern>/DesligarFornecedor</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FornecedorSL</servlet-name>
+		<url-pattern>/IncluirFornecedor</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FornecedorSL</servlet-name>
+		<url-pattern>/Fornecedor</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FornecedorSL</servlet-name>
+		<url-pattern>/Fornecedores</url-pattern>
+	</servlet-mapping>
+
+	<!-- // Fornecedor -->
+
+	<!-- // Contato -->
+
+	<servlet-mapping>
+		<servlet-name>ContatoSL</servlet-name>
+		<url-pattern>/DeletarContato</url-pattern>
+	</servlet-mapping>
+
+	<!-- // Contato -->
+
+
+	<!-- // Produto -->
+
+	<servlet-mapping>
+		<servlet-name>ProdutoSL</servlet-name>
+		<url-pattern>/DesativarProduto</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ProdutoSL</servlet-name>
+		<url-pattern>/IncluirProduto</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ProdutoSL</servlet-name>
+		<url-pattern>/Produto</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ProdutoSL</servlet-name>
+		<url-pattern>/Produtos</url-pattern>
+	</servlet-mapping>
+
+	<!-- // Produto -->
+
+
+	<!-- // Baixa -->
+
+	<servlet-mapping>
+		<servlet-name>BaixaSL</servlet-name>
+		<url-pattern>/Baixa</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>BaixaSL</servlet-name>
+		<url-pattern>/IncluirBaixa</url-pattern>
+	</servlet-mapping>
+
+	<!-- // Baixa -->
+
+	<!-- // OrdermDeCompra -->
+
+	<servlet-mapping>
+		<servlet-name>OrdemDeCompraSL</servlet-name>
+		<url-pattern>/OrdemDeCompra</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>OrdemDeCompraSL</servlet-name>
+		<url-pattern>/IncluirOrdemDeCompra</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>OrdemDeCompraSL</servlet-name>
+		<url-pattern>/ObterItensOrdem</url-pattern>
+	</servlet-mapping>
+
+	<!-- // OrdermDeCompra -->
+
+	<!-- // Entrada -->
+
+	<servlet-mapping>
+		<servlet-name>EntradaSL</servlet-name>
+		<url-pattern>/Entrada</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>EntradaSL</servlet-name>
+		<url-pattern>/IncluirEntrada</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>EntradaSL</servlet-name>
+		<url-pattern>/ObterEntradas</url-pattern>
+	</servlet-mapping>
+	<!-- // Entrada -->
+
+	<!-- <servlet-mapping> -->
+	<!-- <servlet-name>Authentication</servlet-name> -->
+	<!-- <url-pattern>/Authentication</url-pattern> -->
+	<!-- </servlet-mapping> -->
+
+
+	<servlet-mapping>
+		<servlet-name>DashboardSL</servlet-name>
+		<url-pattern>/Dashboard</url-pattern>
+	</servlet-mapping>
+
+	<!-- paginas de relatórios -->
+
+	<servlet-mapping>
+		<servlet-name>RelatorioSL</servlet-name>
+		<url-pattern>/RelatoriosOrdemDeCompra</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RelatorioSL</servlet-name>
+		<url-pattern>/RelatoriosComparativo</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RelatorioSL</servlet-name>
+		<url-pattern>/RelatoriosFornecedor</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RelatorioSL</servlet-name>
+		<url-pattern>/RelatoriosBaixa</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RelatorioSL</servlet-name>
+		<url-pattern>/RelatoriosEntrada</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RelatorioSL</servlet-name>
+		<url-pattern>/RelatoriosPerdas</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RelatorioSL</servlet-name>
+		<url-pattern>/RelatoriosValidade</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RelatorioSL</servlet-name>
+		<url-pattern>/RelatoriosSugestaoDeCompra</url-pattern>
+	</servlet-mapping>
+
+	<!-- paginas de relatórios -->
+
+	<!-- Gerador de relatórios -->
+	<servlet-mapping>
+		<servlet-name>GerarRelatorioSL</servlet-name>
+		<url-pattern>/GerarRelatoriosOrdemDeCompra</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GerarRelatorioSL</servlet-name>
+		<url-pattern>/GerarRelatoriosComparativo</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GerarRelatorioSL</servlet-name>
+		<url-pattern>/GerarRelatoriosFornecedor</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GerarRelatorioSL</servlet-name>
+		<url-pattern>/GerarRelatoriosEntrada</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GerarRelatorioSL</servlet-name>
+		<url-pattern>/GerarRelatoriosPerdas</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GerarRelatorioSL</servlet-name>
+		<url-pattern>/GerarRelatoriosValidade</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GerarRelatorioSL</servlet-name>
+		<url-pattern>/GerarRelatoriosBaixa</url-pattern>
+	</servlet-mapping>
+
+	<!-- Gerador de relatórios -->
+
+	<welcome-file-list>
+		<welcome-file>Dashboard</welcome-file>
+	</welcome-file-list>
+</web-app>
